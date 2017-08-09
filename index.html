@@ -2,12 +2,14 @@
 <html>
 <script>
 setInterval(update,1000/60);
-function update(){
+var movement;
 	function handleOrientation(event) {
 		var absolute = event.absolute;
-  		var gamma    = event.gamma;
+  		movement = event.gamma;
 	}
-	window.scrollBy(gamma*2,0);
+function update(){
+
+	window.scrollBy(movement*2,0);
 }
 </script>
   <head>
