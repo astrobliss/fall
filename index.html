@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-<script>
+<script type="text/javascript">
 setInterval(update,1000/60);
-var movement;
-	function handleOrientation(event) {
-		var absolute = event.absolute;
-  		movement = event.gamma;
-	}
+window.addEventListener('deviceorientation', handleOrientation);
+function handleOrientation(event) {
+  var y = event.gamma;
+}
 function update(){
 
-	window.scrollBy(movement*2,0);
+	window.scrollBy(y+10,0);
 }
 </script>
   <head>
